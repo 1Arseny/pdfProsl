@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Primary title & description (SEO) -->
+  <title>PDF-гайд — Защита от прослушки и трекеров (бесплатно) | Codeby</title>
+  <meta name="description" content="Бесплатный PDF-гайд по обнаружению жучков, защите телефона и уменьшению рисков слежки. Практические чек-листы, инструменты и промокод на курсы Codeby.">
+
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://codeby.school/">
+  <meta name="robots" content="index, follow">
+
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+  <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Codeby">
+  <meta property="og:title" content="PDF-гайд — Защита от прослушки и трекеров">
+  <meta property="og:description" content="Скачай бесплатный практический гайд: как обнаружить жучки, защитить устройство и уменьшить риски слежки. Чек-листы и промокод на курсы.">
+  <!-- Предпочтительно заменить на картинку-обложку гайда (1200x630) -->
+  <meta property="og:image" content="https://res.cloudinary.com/drxnyjdlx/image/upload/v1750695720/logo2_k9lohp.svg">
+  <meta property="og:image:alt" content="Codeby — PDF-гайд по защите от прослушки">
+  <meta property="og:url" content="https://codeby.school/">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@codeby">
+  <meta name="twitter:title" content="PDF-гайд — Защита от прослушки и трекеров">
+  <meta name="twitter:description" content="Практические методы обнаружения прослушки, советы по безопасности, чек-листы и промокод на курсы Codeby.">
+  <meta name="twitter:image" content="https://res.cloudinary.com/drxnyjdlx/image/upload/v1750695720/logo2_k9lohp.svg">
+
+  <!-- Additional meta -->
+  <meta name="theme-color" content="#10b981">
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://res.cloudinary.com/" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Preload critical assets -->
+  <link rel="preload" href="dist/output.css" as="style">
+  <link rel="preload" href="img/photo_2025-07-28_18-25-34.webp" as="image">
+  <!-- если есть обложка гайда, добавь preload для неё (1200x630) -->
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="dist/output.css">
+
+  <script src="src/main.js" defer></script>
+</head>
+<body>
+
+<section id="rain-section" class="relative flex flex-col items-center justify-center w-full h-screen overflow-hidden animated-gradient">
+  <div class="scanline"></div>
+  <!-- Фоновые blobs -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="blob1 animate-blob"></div>
+    <div class="blob2 animate-blob animation-delay-2s"></div>
+    <div class="blob3 animate-blob animation-delay-4s"></div>
+  </div>
+  <!-- Дождевые окружности -->
+  <div id="rain-drops" class="absolute inset-0 pointer-events-none z-10"></div>
+
+  <!-- Контент: внешний контейнер для сохранения отступов слева/справа -->
+  <div class="relative z-20 w-full">
+    <div class="mx-auto max-w-6xl px-6 flex flex-col items-center justify-center">
+      <!-- Логотип -->
+      <img src="https://res.cloudinary.com/drxnyjdlx/image/upload/v1750695720/logo2_k9lohp.svg"
+           alt="Codeby Logo"
+           class="h-12 w-auto mb-6 select-none glow-green" />
+
+      <!-- SVG + терминальный заголовок -->
+      <div class="flex items-center justify-center mb-3">
+        <svg width="36" height="36" fill="none" viewBox="0 0 24 24" class="text-green-400 mr-2 drop-shadow-[0_0_8px_#34d399]">
+          <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l2-2-2-2M11 13h4"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <h1 class="text-3xl md:text-5xl font-extrabold font-hacker text-green-400 tracking-tight drop-shadow-[0_0_16px_#22d3ee]">
+          PDF-гайд: Как защититься от прослушки
+        </h1>
+        <span class="inline-block w-2 h-8 bg-green-400 align-bottom animate-pulse ml-2 rounded"></span>
+      </div>
+
+      <h2 class="text-xl md:text-2xl font-bold text-center mb-4 font-hacker text-cyan-400">
+        <span class="font-mono">root@privacy:~#</span>
+        <span class="text-white">Защита от трекеров и скрытой записи — 2025</span>
+      </h2>
+
+      <!-- Псевдотерминал (имитация вывода) -->
+      <div class="font-hacker terminal-bg text-green-300 text-base md:text-lg mb-6 text-center px-4 py-2 rounded inline-flex flex-col items-center gap-1 shadow-lg w-auto mx-auto">
+        <div id="typed-terminal-lines" class="w-full"></div>
+      </div>
+
+      <p class="text-lg md:text-xl mb-2 text-center font-hacker text-white">
+        Практичные методы: обнаружение жучков, защита телефона, безопасные привычки, как нейтрализовать BLE/радиомаячки и снизить риски слежки.
+      </p>
+
+      <div class="bg-black/60 border border-green-400 rounded-lg px-4 py-2 text-green-400 text-base font-semibold my-3 text-center font-hacker glow-green shadow-md">
+        Бонус: чек-лист для быстрого осмотра сумки и комнаты
+      </div>
+
+      <p class="text-lg mb-8 text-center font-hacker text-green-300">
+        👉 Скачай PDF-гайд — и узнай простые шаги, которые можно сделать сейчас, чтобы вернуть контроль над приватностью.
+      </p>
+
+      <!-- Глитч-кнопка -->
+      <button
+        id="openIframeBtn"
+        class="openIframeBtn relative bg-green-600 hover:bg-green-700 text-black font-hacker py-3 px-8 rounded-2xl shadow-lg transition text-lg before:content-[''] before:absolute before:inset-0 before:border-2 before:border-green-400 before:rounded-2xl before:opacity-20 overflow-hidden animate-cta-pulse"
+        type="button"
+      >
+        <span class="relative z-10">Получить PDF-гайд</span>
+      </button>
+    </div>
+  </div>
+</section>
+<!-- Модалка с iframe -->
+  <div id="iframeModal" class="hidden fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-[9999] flex items-center justify-center transition-all duration-300">
+    <div id="modalDialog" class="relative w-[90vw] h-[90vh] max-w-5xl opacity-0 scale-95 transition-all duration-300">
+      <iframe src="https://services-pdf-guide.codeby.school/?source=pdf-proslyshka-гайд"
+              class="w-full h-full border-2 border-orange-500 rounded-xl shadow-2xl bg-white"></iframe>
+      <button id="closeIframeBtn" class="absolute top-2 right-2 text-white px-4 py-1 rounded-full hover:bg-red-700 z-10 text-2xl">✖</button>
+    </div>
+  </div>
+<section id="tools-section" class="relative flex flex-col bg-black items-center justify-center w-full min-h-[520px] py-24 animated-gradient-tools overflow-hidden">
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="tools-blob1"></div>
+    <div class="tools-blob2"></div>
+  </div>
+  <!-- Лёгкий дождик-окружности -->
+  <div id="rain-drops-tools" class="absolute inset-0 pointer-events-none z-10"></div>
+  <!-- Контент -->
+  <div class="relative z-20 max-w-2xl w-full mx-auto flex flex-col items-center px-4">
+<div class="flex items-center gap-2 mb-6">
+  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="text-cyan-400">
+    <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" stroke="currentColor" stroke-width="2"/>
+    <path d="M7 11l2-2-2-2M11 13h4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <h2 class="text-2xl md:text-3xl font-bold font-hacker text-cyan-300 tracking-tight glow-green">
+    Что внутри PDF-гайда?
+  </h2>
+  <span class="term-cursor ml-2"></span>
+  </div>
+  <!-- Бокс: те же классы, изменён только текст заголовка внутри -->
+  <div class="w-full bg-black/50 border border-cyan-900/40 rounded-xl shadow-lg px-6 py-6 flex flex-col gap-2 font-hacker text-base md:text-lg text-left">
+    <div class="mb-2 text-cyan-400 font-bold flex items-center gap-2">
+      <span class="text-xl">🔧</span>
+      <span>Содержание гайда:</span>
+    </div>
+
+    <!-- Список: сохранён стиль со знаком $ и цветными тегами -->
+    <ul class="list-none pl-0 space-y-2 text-[1.08em]" id="tools-list">
+      <li class="tool-item opacity-0 translate-y-8 transition-all duration-700" data-order="0">
+        <span class="text-green-400 font-bold">$</span>
+        <span class="text-fuchsia-400 glow-green">Типы устройств</span>
+        <span class="text-gray-400">(от диктофонов до лазерных микрофонов)</span>
+      </li>
+      <li class="tool-item opacity-0 translate-y-8 transition-all duration-700" data-order="1">
+        <span class="text-green-400 font-bold">$</span>
+        <span class="text-cyan-400 glow-green">Передача данных</span>
+        <span class="text-gray-400">— что она говорит о методах слежки</span>
+      </li>
+      <li class="tool-item opacity-0 translate-y-8 transition-all duration-700" data-order="2">
+        <span class="text-green-400 font-bold">$</span>
+        <span class="text-yellow-400 glow-green">Признаки наблюдения</span>
+        <span class="text-gray-400">(как понять, что рядом установлено устройство)</span>
+      </li>
+      <li class="tool-item opacity-0 translate-y-8 transition-all duration-700" data-order="3">
+        <span class="text-green-400 font-bold">$</span>
+        <span class="text-purple-300 glow-green">Обзор средств самопроверки</span>
+        <span class="text-gray-400">(реальные устройства и ПО)</span>
+      </li>
+      <li class="tool-item opacity-0 translate-y-8 transition-all duration-700" data-order="4">
+        <span class="text-green-400 font-bold">$</span>
+        <span class="text-lime-400 glow-green">Советы</span>
+        <span class="text-gray-400">(как не стать жертвой случайного шпионажа)</span>
+      </li>
+      <li class="tool-item opacity-0 translate-y-8 transition-all duration-700" data-order="5">
+        <span class="text-green-400 font-bold">$</span>
+        <span class="text-sky-300 glow-green">Лайфхаки и чек-листы</span>
+        <span class="text-gray-400">(для повседневной защиты)</span>
+      </li>
+    </ul>
+  </div>
+  </div>
+</section>
+<section id="author-section" class="relative w-full flex flex-col items-center py-20 px-4 animated-gradient-author overflow-hidden">
+  <!-- Фоновые blobs и терминал -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="author-blob1"></div>
+    <div class="author-blob2"></div>
+    <!-- Анимированный терминал -->
+    <div id="author-terminal-bg"
+         class="absolute md:absolute bottom-6 left-1/2 md:left-10 md:bottom-8 -translate-x-1/2 md:translate-x-0 z-10 pointer-events-none"
+         style="width: 95vw; max-width: 440px;">
+      <!-- Команды появятся через JS -->
+    </div>
+  </div>
+  
+  <!-- Заголовок вне блока автора -->
+  <div class="relative z-20 w-full max-w-2xl mx-auto mb-8 text-center flex flex-col items-center">
+    <div class="flex items-center gap-2 justify-center mb-2">
+      <svg width="30" height="30" viewBox="0 0 20 20" fill="none" class="text-green-400 drop-shadow-[0_0_7px_#22d3ee]">
+        <path d="M4 15l6-6m0 0l6 6M10 9V3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <h2 class="text-2xl md:text-3xl font-bold text-green-400 glow-green tracking-tight font-hacker hacker-title">
+        Кто автор?
+      </h2>
+     
+    </div>
+  </div>
+  
+  <!-- Блок автора -->
+  <div class="relative z-20 flex flex-col md:flex-row items-center max-w-3xl mx-auto w-full gap-8 bg-gray-900/90 md:bg-black/60 rounded-2xl shadow-xl border border-cyan-900/30 px-6 py-8">
+   <!-- Фото автора -->
+    <div class="flex-shrink-0">
+      <img src="img/IMG_20251016_142254_195.webp"
+          alt="Екатерина Тьюринг"
+          class="w-40 h-40 md:w-48 md:h-48 object-cover rounded-full border-4 border-green-400 shadow-lg glow-green bg-gray-900" />
+    </div>
+    <!-- Текст -->
+    <div class="flex flex-col items-center md:items-start text-center md:text-left font-hacker text-white gap-3">
+      <div class="flex items-center gap-2 text-lg font-bold text-cyan-300 mb-1">
+        ✍️ <span>Екатерина Тьюринг</span>
+      </div>
+      <div class="text-green-300 font-semibold mb-2">
+        Кибердетектив. Преподаватель курса <span class="text-orange-400">«OSINT: технология боевой разведки»</span> в Академии Codeby
+      </div>
+      <div class="text-base md:text-lg text-gray-200 mb-2">
+        Более 10 лет опыта, десятки проверенных инфраструктур, сотни студентов, которые уже работают в ИБ.
+      </div>
+      <div class="text-base text-cyan-200">
+        Этот гайд — часть методического материала курса.<br>
+        <span class="text-green-300">Получите его бесплатно.</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="bonus-section" class="relative w-full flex justify-center py-16 px-4 animated-gradient-bonus overflow-hidden">
+  <!-- Фоновые blobs -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="bonus-blob1"></div>
+    <div class="bonus-blob2"></div>
+  </div>
+
+  <div class="relative z-20 flex flex-col items-center max-w-2xl w-full mx-auto px-4 py-10 bg-black md:bg-black/60 rounded-2xl shadow-2xl border border-green-500/30">
+    <div class="flex items-center gap-2 mb-4 justify-center">
+        <span class="text-3xl animate-bounce-slow">🎁</span>
+        <h2 id="bonus-type-title" class="text-2xl md:text-3xl font-bold font-hacker text-green-400 glow-green tracking-tight">
+          Вместе с гайдом — подарок
+        </h2>
+        <span class="term-cursor ml-2"></span>
+    </div>
+    <div class="font-hacker text-lg md:text-xl text-cyan-200 mb-4 text-center">
+      Получите промокод на курс «OSINT: технология боевой разведки»
+    </div>
+    <div class="font-hacker bg-gradient-to-r from-green-500 via-emerald-400 to-cyan-400 bg-clip-text text-transparent text-xl md:text-2xl font-bold mb-3 text-center">
+      Изучите профессиональные методы поиска, верификации и защиты информации.<br>
+      Первый шаг — гайд. Следующий — полное обучение.
+    </div>
+    <div class="font-hacker text-base md:text-lg text-green-300 mt-1 text-center">
+      🎁 Промокод действует 7 дней после скачивания.
+    </div>
+  </div>
+</section>
+<section id="audience-section" class="relative w-full flex justify-center py-24 px-4 animated-gradient-audience overflow-hidden">
+  <!-- Фоновые blobs -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="audience-blob1"></div>
+    <div class="audience-blob2"></div>
+  </div>
+
+  <div class="absolute inset-0 bg-gradient-to-b from-green-900/20 via-cyan-900/10 to-transparent z-0 pointer-events-none"></div>
+  <!-- Контент -->
+  <div class="relative z-20 flex flex-col items-center max-w-2xl w-full mx-auto text-center">
+    <!-- Заголовок -->
+    <div class="flex items-center gap-2 justify-center mb-6">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" class="text-green-400 drop-shadow-[0_0_7px_#22d3ee]">
+        <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2M7 11l2-2-2-2M11 13h4"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h2 class="text-2xl md:text-3xl font-bold font-hacker text-green-400 glow-green tracking-tight">
+        Кому точно пригодится?
+      </h2>
+      <span class="term-cursor ml-2"></span>
+    </div>
+
+    <!-- Список -->
+    <ul class="font-hacker text-lg md:text-xl text-cyan-200 space-y-4 text-left bg-black/60 border border-green-400/30 rounded-2xl shadow-lg px-6 py-8 max-w-xl mx-auto">
+      <li class="audience-item opacity-0 translate-y-6 transition-all duration-700" data-order="0">
+        <span class="text-green-400 font-bold">$</span>
+        <span>Тем, кто участвует в <span class="text-white">важных переговорах</span></span>
+      </li>
+      <li class="audience-item opacity-0 translate-y-6 transition-all duration-700" data-order="1">
+        <span class="text-green-400 font-bold">$</span>
+        <span>Тем, кто живёт в <span class="text-white">крупном городе</span></span>
+      </li>
+      <li class="audience-item opacity-0 translate-y-6 transition-all duration-700" data-order="2">
+        <span class="text-green-400 font-bold">$</span>
+        <span>Тем, кто работает с <span class="text-white">чувствительной информацией</span></span>
+      </li>
+      <li class="audience-item opacity-0 translate-y-6 transition-all duration-700" data-order="3">
+        <span class="text-green-400 font-bold">$</span>
+        <span>Тем, кто хочет понимать, <span class="text-white">как устроен цифровой мир</span> вокруг нас</span>
+      </li>
+    </ul>
+  </div>
+</section>
+<section id="faq-section" class="relative w-full flex flex-col items-center py-20 px-4 animated-gradient-faq overflow-hidden opacity-0 translate-y-12 transition-all duration-700">
+  <!-- Фоновые blobs -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="faq-blob1"></div>
+    <div class="faq-blob2"></div>
+  </div>
+
+  <div class="relative z-20 w-full max-w-2xl mx-auto">
+    <div class="flex items-center gap-2 justify-center mb-7">
+      <svg width="30" height="30" viewBox="0 0 20 20" fill="none"
+           class="text-green-400 drop-shadow-[0_0_7px_#22d3ee] animate-faq-icon-pulse">
+        <path d="M10 3a7 7 0 1 1 0 14A7 7 0 0 1 10 3Zm.01 9v2m-.01-7a2 2 0 0 0-2 2h0a2 2 0 0 0 1.38 1.91c.83.27 1.38 1.06 1.38 1.92" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <h2 class="text-2xl md:text-3xl font-bold text-green-400 glow-green tracking-tight font-hacker">
+        <span id="faq-type-title">Часто задаваемые вопросы</span>
+      </h2>
+    </div>
+
+    <div class="flex flex-col gap-5 font-hacker">
+      <div class="faq-item opacity-0 translate-y-10 transition-all duration-700">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-green-300 text-xl">?</span>
+          <span class="font-semibold text-white">Нужно ли быть специалистом, чтобы разобраться?</span>
+        </div>
+        <div class="pl-7 text-cyan-300 text-base md:text-lg">
+          Нет. Этот гайд рассчитан на «обычного пользователя» без тех. подготовки.
+        </div>
+      </div>
+
+      <div class="faq-item opacity-0 translate-y-10 transition-all duration-700">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-green-300 text-xl">?</span>
+          <span class="font-semibold text-white">Это теория или практика?</span>
+        </div>
+        <div class="pl-7 text-cyan-300 text-base md:text-lg">
+          Только практическая информация: что и где искать, какие признаки заметны, как действовать.
+        </div>
+      </div>
+
+      <div class="faq-item opacity-0 translate-y-10 transition-all duration-700">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="text-green-300 text-xl">?</span>
+          <span class="font-semibold text-white">Это легально?</span>
+        </div>
+        <div class="pl-7 text-cyan-300 text-base md:text-lg">
+          Да, гайд — про защиту, а не про слежку. Все методы — в рамках законодательства.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="cta-section" class="relative w-full flex flex-col items-center py-20 px-4 animated-gradient-cta overflow-hidden">
+  <!-- Фоновые blobs -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="cta-blob1"></div>
+    <div class="cta-blob2"></div>
+  </div>
+
+  <!-- Анимированный терминальный заголовок -->
+  <div class="relative z-20 w-full max-w-xl mx-auto mb-8 text-center flex flex-col items-center">
+    <h2 class="text-2xl md:text-3xl font-bold font-hacker text-green-400 glow-green tracking-tight flex items-center gap-2 justify-center">
+      <span id="cta-type-title"></span>
+    </h2>
+    <div id="cta-desc" class="font-hacker text-base md:text-xl text-cyan-200 mt-4"></div>
+  </div>
+
+  <button
+  id="openIframeBtn"
+  class="openIframeBtn relative bg-green-600 hover:bg-green-700 text-black font-hacker py-3 px-8 rounded-2xl shadow-lg transition text-lg before:content-[''] before:absolute before:inset-0 before:border-2 before:border-green-400 before:rounded-2xl before:opacity-20 overflow-hidden animate-cta-pulse"
+  type="button"
+>
+  <span class="relative z-10">Получить гайд</span>
+</button>
+</section>
+<section id="partner-section" class="relative w-full flex justify-center py-20 px-4 animated-gradient-partner overflow-hidden">
+  <!-- Фоновые blobs -->
+  <div class="absolute inset-0 z-0 pointer-events-none">
+    <div class="partner-blob1"></div>
+    <div class="partner-blob2"></div>
+  </div>
+
+  <!-- Контент -->
+  <div class="relative z-20 flex flex-col md:flex-row items-center justify-center gap-6 max-w-3xl w-full mx-auto bg-black/60 border border-green-400/30 rounded-2xl shadow-xl px-8 py-10 text-center md:text-left">
+    
+    <!-- Логотип -->
+    <a href="https://osint-offensive.codeby.school/" target="_blank" rel="noopener noreferrer"
+       class="flex-shrink-0 transition-transform hover:scale-105">
+      <img src="https://res.cloudinary.com/drxnyjdlx/image/upload/v1750695720/logo2_k9lohp.svg"
+           alt="Академия Codeby"
+           class="h-14 md:h-16 w-auto select-none glow-green" />
+    </a>
+
+    <!-- Текст -->
+    <div class="font-hacker text-cyan-200 md:text-lg flex flex-col items-center md:items-start gap-2">
+      <div class="text-green-400 font-bold text-xl md:text-2xl glow-green">
+        Гайд подготовлен Академией Codeby
+      </div>
+      <p class="text-base md:text-lg text-gray-300">
+        Материал создан при участии преподавателей курса
+        <span class="text-orange-400 font-semibold">«OSINT: технология боевой разведки»</span>.
+      </p>
+      <a href="https://osint-offensive.codeby.school/" target="_blank" rel="noopener noreferrer"
+         class="mt-3 inline-block bg-green-600 hover:bg-green-700 text-black font-hacker py-3 px-6 rounded-2xl shadow-lg transition before:content-[''] before:absolute before:inset-0 before:border-2 before:border-green-400 before:rounded-2xl before:opacity-20 overflow-hidden relative animate-cta-pulse">
+        <span class="relative z-10">Перейти на курс OSINT</span>
+      </a>
+    </div>
+  </div>
+</section>
+<footer class="bg-[#0a0f1f] text-white py-10 px-6 border-t border-gray-700/40">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+    
+    <!-- Левая часть: название и документы -->
+    <div>
+      <div class="mb-2 text-sm">
+        АНО ДПО «Академия Цифровой Защиты» © 2025
+      </div>
+      <a href="https://codeby.school/page/Documents" class="text-orange-500 font-semibold hover:underline text-sm">
+        Документы
+      </a>
+    </div>
+
+    <!-- Правая часть: иконки -->
+    <div class="flex items-center gap-4">
+      <a href="https://t.me/codeby_sec" target="_blank" class="text-black rounded-full p-2 hover:opacity-80 transition">
+        <img src="./img/telegram.svg" alt="Telegram" class="w-8 h-8" />
+      </a>
+      <a href="https://vk.com/codeby" target="_blank" class="text-black rounded-full p-2 hover:opacity-80 transition">
+        <img src="./img/vk.svg" alt="Telegram" class="w-8 h-8" />
+      </a>
+      <a href="https://www.youtube.com/c/TheCodeby" target="_blank" class="text-black rounded-full p-2 hover:opacity-80 transition">
+        <img src="./img/youtube.svg" alt="Telegram" class="w-8 h-8" />
+      </a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
